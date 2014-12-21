@@ -3,7 +3,7 @@
  * Creation Date    	: 2015-01-10 06:15:46 
  * Last modification	: 2006-05-31 
                by		: Narasimha Karumanchi 
- * File Name			: FixedSizeArrayStack.java
+ * File Name			: DynamicArrayStack.java
  * Book Title			: Data Structures And Algorithms Made In Java
  * Warranty         	: This software is provided "as is" without any 
  * 							warranty; without even the implied warranty of 
@@ -13,12 +13,15 @@
 
 
 package chapter4stacks;
-public class FixedSizeArrayStack{
+
+public class DynamicArrayStack{
 	// Length of the array used to implement the stack.
 	protected int capacity;
 
 	// Default array capacity.
 	public static final int CAPACITY = 16;	// power of 2
+	
+	public static int MINCAPACITY=1<<15; // power of 2
 
 	// Array used to implement the stack.
 	protected int[] stackRep;
@@ -27,12 +30,12 @@ public class FixedSizeArrayStack{
 	protected int top = -1;
 
 	// Initializes the stack to use an array of default length.
-	public FixedSizeArrayStack() {
+	public DynamicArrayStack() {
 		this(CAPACITY); // default capacity
 	}
 
 	// Initializes the stack to use an array of given length.
-	public FixedSizeArrayStack(int cap) {
+	public DynamicArrayStack(int cap) {
 		capacity = cap;
 		stackRep = new int[capacity]; // compiler may give warning, but this
 									  // is ok
@@ -51,10 +54,30 @@ public class FixedSizeArrayStack{
 	// Inserts an element at the top of the stack. This method runs in O(1) time.
 	public void push(int data) throws Exception {
 		if (size() == capacity)
-			throw new Exception("Stack is full.");
+			expand();
 		stackRep[++top] = data;
 	}
 
+	private void expand() {
+		int length = size();
+		int[] newstack=new int[length<<1];
+		System.arraycopy(stackRep,0,newstack,0,length);
+		stackRep=newstack;
+	}
+	
+	// dynamic array operation: shrinks to 1/2 if more than than 3/4 empty
+	@SuppressWarnings("unused")
+	private void shrink() {
+		int length = top + 1;
+		if(length<=MINCAPACITY || top<<2 >= length) 
+			return;
+		length=length + (top<<1); // still means shrink to at 1/2 or less of the heap
+		if(top<MINCAPACITY) length = MINCAPACITY;
+		int[] newstack=new int[length];
+		System.arraycopy(stackRep,0,newstack,0,top+1);
+		stackRep=newstack;
+	}
+	
 	// Inspects the element at the top of the stack. This method runs in O(1) time.
 	public int top() throws Exception {
 		if (isEmpty())
