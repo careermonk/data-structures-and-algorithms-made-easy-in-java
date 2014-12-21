@@ -40,7 +40,7 @@ public class LinkedStack<T>{
 	public int pop() throws EmptyStackException{
 		if (isEmpty())
 			throw new EmptyStackException();
-		int result = top.getdata();
+		int result = top.getData();
 		top = top.getNext();
 		length--;
 		return result;
@@ -53,7 +53,7 @@ public class LinkedStack<T>{
 		if (isEmpty())
 			throw new EmptyStackException(); 
 
-		return top.getdata();
+		return top.getData();
 	}
 
 	// Returns true if this stack is empty and false otherwise. 

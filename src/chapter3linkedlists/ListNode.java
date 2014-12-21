@@ -39,7 +39,7 @@ public class ListNode{
 	}
 
 	// Returns the data stored in this node.
-	public int getdata(){
+	public int getData(){
 		return data;
 	}
 
