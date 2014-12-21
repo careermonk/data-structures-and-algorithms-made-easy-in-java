@@ -12,24 +12,44 @@
 
 package chapter3linkedlists;
 
-class ListNode {
-	int data;
-	ListNode next;
- 
-	ListNode(int x) {
-		data = x;
+public class ListNode{
+	public ListNode next;
+	public int data;
+
+	// Creates an empty node.
+	public ListNode(){
 		next = null;
+		data = Integer.MIN_VALUE;
 	}
-	public int getData(){
-		return this.data;
+
+	// Creates a node storing the specified data.
+	public ListNode (int elem){
+		next = null;
+		data = elem;
 	}
-	public void setData(int data){
-		this.data = data;
-	}
+
+	// Returns the node that follows this one.
 	public ListNode getNext(){
-		return this.next;
+		return next;
 	}
-	public void setNext(ListNode node){
-		this.next = node;
+
+	// Sets the node that follows this one.
+	public void setNext (ListNode node){
+		next = node;
 	}
+
+	// Returns the data stored in this node.
+	public int getdata(){
+		return data;
+	}
+
+	// Sets the data stored in this node.
+	public void setdata (int elem){
+		data = elem;
+	}
+	
+	// Sets the data stored in this node.
+	public String toString (){
+		return Integer.toString(data);
+	}	
 }

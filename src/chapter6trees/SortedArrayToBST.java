@@ -11,7 +11,7 @@
  */
 
 package chapter6trees;
-
+import chapter3linkedlists.*;
 public class SortedArrayToBST {
     // bottom up
     public BinarySearchTreeNode sortedListToBST(ListNode head) {
