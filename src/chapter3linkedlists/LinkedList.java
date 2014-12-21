@@ -201,4 +201,10 @@ public class LinkedList {
 		// else return -1
 		return Integer.MIN_VALUE;
 	}
+	
+	// Remove everything from the list.
+	public void clearList(){
+		head = null;
+		length = 0;
+	}
 }

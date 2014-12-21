@@ -23,9 +23,9 @@ public class ListNode{
 	}
 
 	// Creates a node storing the specified data.
-	public ListNode (int elem){
+	public ListNode (int data){
 		next = null;
-		data = elem;
+		this.data = data;
 	}
 
 	// Returns the node that follows this one.
