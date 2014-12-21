@@ -3,6 +3,7 @@
  * Creation Date    	: 2015-01-10 06:15:46 
  * Last modification	: 2006-05-31 
                by		: Narasimha Karumanchi 
+ * File Name			: MirrorOfBinaryTree.java
  * Book Title			: Data Structures And Algorithms Made In Java
  * Warranty         	: This software is provided "as is" without any 
  * 							warranty; without even the implied warranty of 
@@ -10,13 +11,20 @@
  * 
  */
 
+
 package chapter6trees;
-public class MaxDepthRecursiveInBinaryTree {
-    public static int maxDepthRecursive(BinaryTreeNode root) {
-        if(root == null) return 0;
-        /* compute the depth of each subtree */
-        int leftDepth = maxDepthRecursive(root.getLeft());
-        int rightDepth = maxDepthRecursive(root.right);
-        return (leftDepth > rightDepth) ? leftDepth + 1 : rightDepth + 1;
-    }  
+
+public class MirrorOfBinaryTree {
+	public BinaryTreeNode mirrorOfBinaryTree(BinaryTreeNode root) {
+		BinaryTreeNode  temp;
+		if(root != null) {
+			mirrorOfBinaryTree (root.left);
+			mirrorOfBinaryTree (root.right);
+			/* swap the pointers in this node */
+			temp  = root.left;
+			root.left = root.right;
+			root.right = temp;
+		}
+		return root;
+	}
 }
