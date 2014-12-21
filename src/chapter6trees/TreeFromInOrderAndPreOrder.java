@@ -28,7 +28,7 @@ public class TreeFromInOrderAndPreOrder {
             if(inOrder[offset] == data)
                 break;
         }
-        cur.left = buildBT(preOrder, preStart + 1, preStart + offset - inStart, inOrder, inStart, offset - 1);
+        cur.setLeft(buildBT(preOrder, preStart + 1, preStart + offset - inStart, inOrder, inStart, offset - 1));
         cur.right = buildBT(preOrder, preStart + offset - inStart + 1, preEnd, inOrder, offset + 1, inEnd);
         return cur;
     }

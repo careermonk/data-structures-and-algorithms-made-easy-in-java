@@ -3,6 +3,7 @@
  * Creation Date    	: 2015-01-10 06:15:46 
  * Last modification	: 2006-05-31 
                by		: Narasimha Karumanchi 
+ * File Name			: BinaryTreeSize.java
  * Book Title			: Data Structures And Algorithms Made In Java
  * Warranty         	: This software is provided "as is" without any 
  * 							warranty; without even the implied warranty of 
@@ -10,19 +11,14 @@
  * 
  */
 
+
 package chapter6trees;
 
-public class ConstructMirror {
-	public BinaryTreeNode MirrorOfBinaryTree(BinaryTreeNode root) {
-		BinaryTreeNode  temp;
-		if(root != null) {
-			MirrorOfBinaryTree(root.getLeft());
-			MirrorOfBinaryTree(root.right);
-			/* swap the pointers in this node */
-			temp  = root.getLeft();
-			root.setLeft(root.right);
-			root.right = temp;
-		}
-		return root;
+public class BinaryTreeSizeRecursive {
+	// Returns the total number of nodes in this binary tree (include the root in the count).
+	public int size(BinaryTreeNode root) {
+		int leftCount = root.left == null ? 0 : size(root.left);
+		int rightCount = root.right == null ? 0 : size(root.right);
+		return 1 + leftCount + rightCount;
 	}
 }

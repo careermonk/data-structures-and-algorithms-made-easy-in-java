@@ -15,7 +15,7 @@ package chapter6trees;
 public class InOrderRecursive {
 	public void InOrder(BinaryTreeNode root){
 		if(root != null) {
-			InOrder(root.left);
+			InOrder(root.getLeft());
 			System.out.println(root.data);
 			InOrder(root.right);
 		}

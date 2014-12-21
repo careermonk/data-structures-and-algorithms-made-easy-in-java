@@ -3,6 +3,7 @@
  * Creation Date    	: 2015-01-10 06:15:46 
  * Last modification	: 2006-05-31 
                by		: Narasimha Karumanchi 
+ * File Name			: DeleteBinaryTree.java
  * Book Title			: Data Structures And Algorithms Made In Java
  * Warranty         	: This software is provided "as is" without any 
  * 							warranty; without even the implied warranty of 
@@ -10,19 +11,11 @@
  * 
  */
 
+
 package chapter6trees;
 
-public class ConstructMirror {
-	public BinaryTreeNode MirrorOfBinaryTree(BinaryTreeNode root) {
-		BinaryTreeNode  temp;
-		if(root != null) {
-			MirrorOfBinaryTree(root.getLeft());
-			MirrorOfBinaryTree(root.right);
-			/* swap the pointers in this node */
-			temp  = root.getLeft();
-			root.setLeft(root.right);
-			root.right = temp;
-		}
-		return root;
+public class DeleteBinaryTree {
+	public void deleteBinaryTree(BinaryTreeNode root) {
+		root = null;
 	}
 }

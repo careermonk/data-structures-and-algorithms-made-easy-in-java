@@ -18,7 +18,7 @@ public class MinInBinaryTreeRecursive {
 	public int minInBinaryTree(BinaryTreeNode root){
 	    int minValue = Integer.MAX_VALUE;
 	    if (root != null){
-	        int leftMin = minInBinaryTree(root.left);
+	        int leftMin = minInBinaryTree(root.getLeft());
 	        int rightMin = minInBinaryTree(root.right);
 	         
 	        if (leftMin > rightMin)

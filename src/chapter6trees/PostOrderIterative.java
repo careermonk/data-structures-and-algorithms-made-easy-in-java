@@ -25,14 +25,14 @@ public class PostOrderIterative {
 	        BinaryTreeNode prev = null;
 	        while(!s.isEmpty()){
 	        	BinaryTreeNode curr = s.peek();
-	            if(prev == null || prev.left == curr || prev.right == curr){
+	            if(prev == null || prev.getLeft() == curr || prev.right == curr){
 	                // traverse from top to bottom, and if curr has left child or right child, 
 	            	// push into the stack; otherwise, pop out. 
-	                if(curr.left != null)
-	                    s.push(curr.left);
+	                if(curr.getLeft() != null)
+	                    s.push(curr.getLeft());
 	                else if(curr.right != null)
 	                    s.push(curr.right);
-	            }else if(curr.left == prev){
+	            }else if(curr.getLeft() == prev){
 	                if(curr.right != null)
 	                    s.push(curr.right);
 	            }else{

@@ -24,7 +24,7 @@ public class InOrderIterative {
         while(!done){
             if(currentNode != null){
                 s.push(currentNode);
-                currentNode = currentNode.left;
+                currentNode = currentNode.getLeft();
             }else{
                 if(s.isEmpty())
                     done = true;

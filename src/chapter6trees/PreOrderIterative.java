@@ -28,8 +28,8 @@ public class PreOrderIterative {
             // pay more attention to this sequence. 
             if(tmp.right != null)
                 s.push(tmp.right);
-            if(tmp.left != null)
-                s.push(tmp.left);  
+            if(tmp.getLeft() != null)
+                s.push(tmp.getLeft());  
         }
         return res;
     }

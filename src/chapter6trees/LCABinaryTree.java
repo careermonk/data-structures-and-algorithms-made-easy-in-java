@@ -19,7 +19,7 @@ public class LCABinaryTree {
 			return root;
 		if (root == a || root == b)
 			return root;
-		left = LCA(root.left, a, b);
+		left = LCA(root.getLeft(), a, b);
 		right = LCA(root.right, a, b);
 		if (left != null && right != null)
 			return root;// nodes are each on a separate branch

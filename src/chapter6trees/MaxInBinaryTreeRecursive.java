@@ -17,7 +17,7 @@ public class MaxInBinaryTreeRecursive {
 	public int maxInBinaryTree(BinaryTreeNode root){
 	    int maxValue = Integer.MIN_VALUE;
 	    if (root != null){
-	        int leftMax = maxInBinaryTree(root.left);
+	        int leftMax = maxInBinaryTree(root.getLeft());
 	        int rightMax = maxInBinaryTree(root.right);
 	         
 	        if (leftMax > rightMax)

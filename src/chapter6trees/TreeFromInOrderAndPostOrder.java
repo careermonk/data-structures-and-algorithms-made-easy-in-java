@@ -30,7 +30,7 @@ public class TreeFromInOrderAndPostOrder {
             if(inOrder[offset] == val)
                 break;
         }
-        cur.left = buildBT(postOrder, postStart, postStart + offset - inStart - 1, inOrder, inStart, offset - 1);
+        cur.setLeft(buildBT(postOrder, postStart, postStart + offset - inStart - 1, inOrder, inStart, offset - 1));
         cur.right = buildBT(postOrder, postStart + offset - inStart, postEnd - 1, inOrder, offset + 1, inEnd);
         return cur;
     }

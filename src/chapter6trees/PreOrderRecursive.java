@@ -15,7 +15,7 @@ package chapter6trees;
 public class PreOrderRecursive {
 	public void PreOrder(BinaryTreeNode root){
 		if(root != null) {
-			PreOrder(root.left);
+			PreOrder(root.getLeft());
 			System.out.println(root.data);
 			PreOrder(root.right);
 		}

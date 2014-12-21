@@ -31,8 +31,8 @@ public class ZigzagTraversal {
         	BinaryTreeNode tmp = q.poll();
             if(tmp != null){
                 curr.add(tmp.data);
-                if(tmp.left != null)
-                    q.offer(tmp.left);
+                if(tmp.getLeft() != null)
+                    q.offer(tmp.getLeft());
                 if(tmp.right != null)
                     q.offer(tmp.right);
             }else{
