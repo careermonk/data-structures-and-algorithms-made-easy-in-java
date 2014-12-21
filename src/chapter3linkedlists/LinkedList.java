@@ -151,7 +151,6 @@ public class LinkedList {
 		if (position == 0) {
 			head = head.getNext();
 		}
-
 		// else advance to the correct position and remove
 		else {
 			ListNode temp = head;
