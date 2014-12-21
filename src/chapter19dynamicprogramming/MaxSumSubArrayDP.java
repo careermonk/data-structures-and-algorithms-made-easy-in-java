@@ -10,7 +10,7 @@
  * 
  */
 
-package chapter18dynamicprogramming;
+package chapter19dynamicprogramming;
 
 public class MaxSumSubArrayDP {
     public int maxSubArray(int[] A) {

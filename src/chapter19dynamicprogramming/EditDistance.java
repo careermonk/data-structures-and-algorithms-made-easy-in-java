@@ -10,7 +10,7 @@
  * 
  */
 
-package chapter18dynamicprogramming;
+package chapter19dynamicprogramming;
 
 public class EditDistance {
     public int editDistance(String A, String B) {

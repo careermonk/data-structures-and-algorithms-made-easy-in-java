@@ -10,7 +10,7 @@
  * 
  */
 
-package chapter18dynamicprogramming;
+package chapter19dynamicprogramming;
 
 import java.util.ArrayList;
 import java.util.Collection;

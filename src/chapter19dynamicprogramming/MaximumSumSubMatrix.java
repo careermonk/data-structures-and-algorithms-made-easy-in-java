@@ -10,7 +10,7 @@
  * 
  */
 
-package chapter18dynamicprogramming;
+package chapter19dynamicprogramming;
 
 public class MaximumSumSubMatrix {
 	public static void findMaximumSubMatrix(int[][] A){

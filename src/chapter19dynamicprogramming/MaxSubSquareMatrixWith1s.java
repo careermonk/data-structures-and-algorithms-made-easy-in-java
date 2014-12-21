@@ -10,7 +10,7 @@
  * 
  */
 
-package chapter18dynamicprogramming;
+package chapter19dynamicprogramming;
 
 public class MaxSubSquareMatrixWith1s {
 	public static void maxSubSquareMatrixWith1s(int[][] A) {
