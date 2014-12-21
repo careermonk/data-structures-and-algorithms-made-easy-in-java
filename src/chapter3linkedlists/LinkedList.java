@@ -170,7 +170,7 @@ public class LinkedList {
 			return result+"]";
 		}
 		result = result + head.getData();
-		ListNode temp = head.getNext();;
+		ListNode temp = head.getNext();
 		while (temp != null) {
 			result = result + "," + temp.getData();
 			temp = temp.getNext();
