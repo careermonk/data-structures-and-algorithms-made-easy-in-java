@@ -46,7 +46,7 @@ public class DynamicArrayStack{
 		return (top + 1);
 	}
 
-	// Testes whether the stack is empty. This method runs in O(1) time.
+	// Checks whether the stack is empty. This method runs in O(1) time.
 	public boolean isEmpty() {
 		return (top < 0);
 	}
@@ -57,10 +57,11 @@ public class DynamicArrayStack{
 			expand();
 		stackRep[++top] = data;
 	}
-
+	
+	// Increases the stack size by double
 	private void expand() {
 		int length = size();
-		int[] newstack=new int[length<<1];
+		int[] newstack=new int[length<<1];	 // or 2* length
 		System.arraycopy(stackRep,0,newstack,0,length);
 		stackRep=newstack;
 	}
@@ -73,9 +74,9 @@ public class DynamicArrayStack{
 			return;
 		length=length + (top<<1); // still means shrink to at 1/2 or less of the heap
 		if(top<MINCAPACITY) length = MINCAPACITY;
-		int[] newstack=new int[length];
-		System.arraycopy(stackRep,0,newstack,0,top+1);
-		stackRep=newstack;
+		int[] newStack=new int[length];
+		System.arraycopy(stackRep,0,newStack,0,top+1);
+		stackRep=newStack;
 	}
 	
 	// Inspects the element at the top of the stack. This method runs in O(1) time.

@@ -43,7 +43,7 @@ public class FixedSizeArrayStack{
 		return (top + 1);
 	}
 
-	// Testes whether the stack is empty. This method runs in O(1) time.
+	// Checks whether the stack is empty. This method runs in O(1) time.
 	public boolean isEmpty() {
 		return (top < 0);
 	}
