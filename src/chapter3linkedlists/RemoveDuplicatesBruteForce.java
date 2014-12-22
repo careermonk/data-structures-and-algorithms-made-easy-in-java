@@ -15,7 +15,7 @@
 package chapter3linkedlists;
 
 public class RemoveDuplicatesBruteForce {
-	public static void removeDuplicates2(ListNode head) {
+	public static void removeDuplicates(ListNode head) {
 		ListNode curr = head;
 		if(curr == null || curr.getNext() == null) {
 			return; // 0 or 1 nodes in the list so no duplicates
