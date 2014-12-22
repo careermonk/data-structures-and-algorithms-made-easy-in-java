@@ -93,6 +93,20 @@ public class LinkedList {
 		}
 		return node;
 	}
+	
+	// Remove and return the node at the end of the list 
+	public synchronized ListNode getLast() {
+		if (head == null) 
+			return null;
+		if (head.getNext() == null) {
+			return head;
+		}
+		ListNode p = head.getNext();
+		while(p.getNext() != null) { 
+			p = p.getNext();
+		}
+		return p;
+	}
 
 	// Remove and return the node at the end of the list 
 	public synchronized ListNode removeFromEnd() {
@@ -199,6 +213,11 @@ public class LinkedList {
 		}
 		// else return -1
 		return Integer.MIN_VALUE;
+	}
+	
+	// Size of the list.
+	public boolean isEmpty(){
+		return length==0;
 	}
 	
 	// Remove everything from the list.

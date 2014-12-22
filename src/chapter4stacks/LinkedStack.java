@@ -16,7 +16,7 @@ package chapter4stacks;
 import chapter3linkedlists.*;
 import java.util.EmptyStackException;
 
-public class LinkedStack<T>{
+public class LinkedStack{
 	private int length;  		// indicates the size of the linked list
 	private ListNode top; 
 
