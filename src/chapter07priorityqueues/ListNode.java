@@ -10,7 +10,7 @@
  * 
  */
 
-package chapter7priorityqueues;
+package chapter07priorityqueues;
 class ListNode {
 	int data;
 	ListNode next;

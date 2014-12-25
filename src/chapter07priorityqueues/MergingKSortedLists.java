@@ -10,7 +10,7 @@
  * 
  */
 
-package chapter7priorityqueues;
+package chapter07priorityqueues;
 
 import java.util.ArrayList;
 import java.util.Comparator;
