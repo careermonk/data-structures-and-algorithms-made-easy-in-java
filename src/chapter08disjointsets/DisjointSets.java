@@ -15,7 +15,6 @@
 package chapter08disjointsets;
 
 public class DisjointSets {
-
 	  private int[] S;
 	  public DisjointSets(int numElements) {
 	    S = new int [numElements];
