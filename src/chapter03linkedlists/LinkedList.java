@@ -115,6 +115,8 @@ public class LinkedList {
 		ListNode p = head, q = null, next = head.getNext();
 		if (next == null) {
 			head = null;
+			// reduce the length of the list
+			length-=1;
 			return p;
 		}
 		while((next = p.getNext()) != null) { 
@@ -122,6 +124,8 @@ public class LinkedList {
 			p = next;
 		}
 		q.setNext(null);
+		// reduce the length of the list
+		length-=1;
 		return p;
 	}
 
