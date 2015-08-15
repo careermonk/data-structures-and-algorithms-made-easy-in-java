@@ -75,7 +75,7 @@ public class BinaryTreeNode {
 		}
 		else {
 			    String root, left = "null", right = "null";
-			    root = this.toString();
+			    root = this.toString1();
 			    if (getLeft() != null) {
 					left = getLeft().toString();
 			    }
