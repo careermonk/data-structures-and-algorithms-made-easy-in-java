@@ -71,11 +71,11 @@ public class BinaryTreeNode {
 	// Returns a String representation of this BinaryTreeNode.
 	public String toString() {
 		if (isLeaf()) {
-			return this.toString();
+			return this.toString1();
 		}
 		else {
 			    String root, left = "null", right = "null";
-			    root = this.toString();
+			    root = this.toString1();
 			    if (getLeft() != null) {
 					left = getLeft().toString();
 			    }
