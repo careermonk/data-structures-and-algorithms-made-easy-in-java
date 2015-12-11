@@ -14,8 +14,6 @@
 
 package chapter10sorting;
 
-import java.util.Arrays;
-
 public class ConvertArraytoSawToothWaveLinearTime {
     public void convertArraytoSawToothWaveLinearTime(int A[]){
         // Traverse all even elements
