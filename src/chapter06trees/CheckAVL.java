@@ -13,10 +13,10 @@
 package chapter06trees;
 
 public class CheckAVL {
-    public boolean isAVL(BinarySearchTreeNode root) {
+    public boolean isAVL(BinarySearchTreeNode root, int min, int max) {
         if(root == null)
             return true;
-        return isAVL(root.left) && isAVL(root.right) && Math.abs(getHeight(root.left) - getHeight(root.right)) <= 1;
+        return root.data > min && root.data < max && isAVL(root.left, min, root.data) && isAVL(root.right, root.data, max) && Math.abs(getHeight(root.left) - getHeight(root.right)) <= 1;
     }
     public int getHeight(BinarySearchTreeNode root){
         int leftHeight, rightHeight;
@@ -30,5 +30,9 @@ public class CheckAVL {
             else
                 return rightHeight + 1;
         }
+    }
+    
+    public boolean isAVL(BinarySearchTreeNode root){
+        return isAVL(BinarySearchTreeNode root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 }
