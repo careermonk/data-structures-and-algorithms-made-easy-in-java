@@ -24,4 +24,19 @@ public class NthNodeFromEnd {
 	    }
 	    return null;
 	}
+	
+    public static ListNode nthNodeFromEndIterative(ListNode head, int Nth) {
+        ListNode n = head;
+        // Get nth from the start
+        for (int i = 0; i < Nth; i++) {
+            n = n.next;
+        }
+        // Move both the head and nth node so the difference between them is n
+        // Thus we get the nth node from the end
+        while(n != null){
+            head = head.next;
+            n = n.next;
+        }
+        return head;
+    }
 }
