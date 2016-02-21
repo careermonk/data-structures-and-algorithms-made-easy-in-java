@@ -57,9 +57,9 @@ public class DoublyLinkedList{
 
 	// Add a new value to the front of the list.
 	public void insert(int newValue) {
-		DLLNode newNode = new DLLNode(newValue,head,head.getNext());
+		DLLNode newNode = new DLLNode(newValue,null,head.getNext());
 		newNode.getNext().setPrev(newNode);
-		head.setNext(newNode);
+		head = newNode;
 		length += 1;
 	} 
 
