@@ -29,19 +29,19 @@ public class NthNodeFromEnd {
     	if(head == null){
             return null;
         }
-        ListNode n = head;
+        ListNode nth = head;
         // Get nth from the start
         for (int i = 0; i < Nth; i++) {
             if(nth.next == null){
                 return null;
             }
-            n = n.next;
+            nth = nth.next;
         }
         // Move both the head and nth node so the difference between them is n
         // Thus we get the nth node from the end
-        while(n != null){
+        while(nth != null){
             head = head.next;
-            n = n.next;
+            nth = nth.next;
         }
         return head;
     }
