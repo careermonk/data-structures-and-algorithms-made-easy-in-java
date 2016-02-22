@@ -11,7 +11,6 @@
  * 
  */
 
-
 package chapter03linkedlists;
 
 public class CommonElementsInSortedLinkedLists {
