@@ -7,7 +7,7 @@ Data Structure And Algorithms Made Easy In Java
 
  Last modification by	  : Narasimha Karumanchi 
           
- Book Title		           : Data Structures And Algorithms Made In Java
+ Book Title		           : Data Structures And Algorithms Made Easy In Java
  
  ISBN                   : 9781466304161 [For India]/9781468101270 [Except India]
  
