@@ -25,7 +25,7 @@ public class DiameterOfTree {
 		right = diameterOfTree(root.getRight());
 		if(left + right > diameter)
 			diameter = left + right;
-			return Math.max(left, right)+1;
+		return Math.max(left, right)+1;
 	}
 	// Alternative Coding
 	public int diameter(BinaryTreeNode root){
