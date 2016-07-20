@@ -33,6 +33,6 @@ public class CheckAVL {
     }
     
     public boolean isAVL(BinarySearchTreeNode root){
-        return isAVL(BinarySearchTreeNode root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        return isAVL(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 }
