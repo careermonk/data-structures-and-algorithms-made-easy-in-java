@@ -23,7 +23,7 @@ public class MergeKSortedLists {
         }
         //PriorityQueue is a sorted queue
         PriorityQueue<ListNode> pq = new PriorityQueue<>(lists.size(), (ListNode a, ListNode b) -> {
-            if (a.getData() > b.getData) {
+            if (a.getData() > b.getData()) {
                 return 1;
             } else if (a.getData() == b.getData()) {
                 return 0;
