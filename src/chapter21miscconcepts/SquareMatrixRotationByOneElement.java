@@ -28,7 +28,7 @@ public class SquareMatrixRotationByOneElement {
                     // move left
                     roataedMatrix[i][j-1] = matrix[i][j];
                 } else if(i+j<=n-1 && i>j){
-                    // move top
+                    // move up
                     roataedMatrix[i-1][j] = matrix[i][j];
                 } else if(i+j>=n-1 && i<j) {
                     // move down
