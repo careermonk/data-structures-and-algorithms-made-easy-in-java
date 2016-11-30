@@ -64,6 +64,7 @@ public class DynamicArrayStack{
 		int[] newstack=new int[length<<1];	 // or 2* length
 		System.arraycopy(stackRep,0,newstack,0,length);
 		stackRep=newstack;
+		this.capacity = this.capacity<<1;
 	}
 	
 	// dynamic array operation: shrinks to 1/2 if more than than 3/4 empty
@@ -77,6 +78,7 @@ public class DynamicArrayStack{
 		int[] newStack=new int[length];
 		System.arraycopy(stackRep,0,newStack,0,top+1);
 		stackRep=newStack;
+		capacity = length;
 	}
 	
 	// Inspects the element at the top of the stack. This method runs in O(1) time.
@@ -93,6 +95,7 @@ public class DynamicArrayStack{
 			throw new Exception("Stack is empty.");
 		data = stackRep[top];
 		stackRep[top--] = Integer.MIN_VALUE; // dereference S[top] for garbage collection.
+		shrink();
 		return data;
 	}
 
