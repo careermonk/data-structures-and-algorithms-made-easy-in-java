@@ -1,3 +1,4 @@
+package chapter18divideandconquer;
 public class PeakFinder_1D_Binary_Search{
 
   public static Integer findPeak(int[] A) {

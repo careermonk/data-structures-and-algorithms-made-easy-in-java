@@ -1,3 +1,5 @@
+package chapter18divideandconquer;
+
 public class PeakFinder_1D_Linear_Search{
 
   public static Integer findPeak(int[] A) {
