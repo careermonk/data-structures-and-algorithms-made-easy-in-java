@@ -29,6 +29,7 @@ public class FindLevelwithMaxSum {
 		while (!q.isEmpty()) {
 			BinaryTreeNode tmp = q.poll();
 			if (tmp != null) {
+				currentSum += tmp.getData();
 				if (tmp.getLeft() != null)
 					q.offer(tmp.getLeft());
 				if (tmp.right != null)
