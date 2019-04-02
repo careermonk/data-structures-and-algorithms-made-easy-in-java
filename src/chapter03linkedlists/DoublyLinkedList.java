@@ -163,6 +163,7 @@ public class DoublyLinkedList{
 				p.next.prev = p.prev;
 				return;
 			}
+			p = p.getNext();
 		}
 	}
 	
