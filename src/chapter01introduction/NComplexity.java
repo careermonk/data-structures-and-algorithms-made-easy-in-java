@@ -23,7 +23,7 @@ public class NComplexity {
 	}
 	public static int orderN(int n){
 		int count = 0;
-		for (int i = 1; i<n;){
+		for (int i = 1; i < n; ){
 			count ++;
 			i = i+1;
 		}
