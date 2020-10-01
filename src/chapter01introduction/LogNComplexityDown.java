@@ -23,7 +23,7 @@ public class LogNComplexityDown {
 	
 	public static int logNUp(int n){
 		int count = 0;
-		for (int i = n; i>0;){
+		for (int i = n; i > 0; ){
 			count ++;
 			i = i / 2;
 		}
