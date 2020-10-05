@@ -21,12 +21,12 @@ public class NPower3By2Complexity {
 		System.out.println(nPower3By2(n));
 	}
 	public static int nPower3By2(int n){
-		int i=1, j;
+		int i = 1, j;
 		int count = 0;
 		int sum = 0;
-		for (i = 0; i <n; i++){
+		for (i = 0; i < n; i++){
 			j = 0;
-			while(sum<i){
+			while(sum < i){
 				sum = sum + j;
 				j++;
 				count++;
