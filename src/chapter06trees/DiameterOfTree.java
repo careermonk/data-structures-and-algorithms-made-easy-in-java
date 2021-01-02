@@ -32,7 +32,7 @@ public class DiameterOfTree {
 		if(root==null) return 0;
 
 		//the path goes through the root
-		int len1 = height(root.left) + height(root.right) +3;
+		int len1 = height(root.left) + height(root.right) + 1;
 
 		//the path does not pass the root
 		int len2 = Math.max(diameter(root.left), diameter(root.right));
