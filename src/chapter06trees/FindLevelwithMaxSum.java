@@ -19,7 +19,7 @@ import java.util.Queue;
 
 public class FindLevelwithMaxSum {
 	public int findLevelwithMaxSum(BinaryTreeNode root) {
-		int maxSum = 0, currentSum = 0;
+		int maxSum = Integer.MIN_VALUE, currentSum = 0;
 		if (root == null)
 			return 0;
 		// Initialization
